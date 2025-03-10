@@ -52,12 +52,12 @@ def create_mcp_server(server_name: str, package_names: list[str]) -> FastMCP:
 
 
 if __name__ == "__main__":
-    # Get packages from command line arguments
-    if len(sys.argv) < 2:
-        print("Usage: python main.py package1 package2 ...")
+    # Get packages from a single comma-separated argument
+    if len(sys.argv) != 2:
+        print("Usage: python main.py package1,package2,package3")
         sys.exit(1)
 
-    packages = sys.argv[1:]
+    packages = sys.argv[1].split(",")
     print(f"Initializing mcpup for packages: {', '.join(packages)}")
 
     # Initialize models
