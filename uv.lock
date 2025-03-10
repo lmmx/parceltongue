@@ -1,5 +1,4 @@
 version = 1
-revision = 1
 requires-python = ">=3.12"
 
 [[package]]
@@ -148,6 +147,21 @@ cli = [
 ]
 
 [[package]]
+name = "mcpup"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "pydantic" },
+    { name = "pydantic-function-models" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2d/d4/856ef7c29032bd69b747485c50614144522ff3a6f1c6bf28d1eed3ace204/mcpup-0.1.1.tar.gz", hash = "sha256:5f30f780c5d4036b8822165fb2149811712ed107c2c8e0b42f77869ff16d57f7", size = 10315 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c3/77/3990eef805a4da66c9cd86f4b40aeef07759573feb75acc411260988fe19/mcpup-0.1.1-py3-none-any.whl", hash = "sha256:976f573f4fadfd13327ba2fb6213fde3604abfa830e6e245ba3e6d7be75b2afb", size = 9997 },
+]
+
+[[package]]
 name = "mdurl"
 version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -207,6 +221,18 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/a4/99/bddde3ddde76c03b65dfd5a66ab436c4e58ffc42927d4ff1198ffbf96f5f/pydantic_core-2.27.2-cp313-cp313-win32.whl", hash = "sha256:1ebaf1d0481914d004a573394f4be3a7616334be70261007e47c2a6fe7e50130", size = 1834387 },
     { url = "https://files.pythonhosted.org/packages/71/47/82b5e846e01b26ac6f1893d3c5f9f3a2eb6ba79be26eef0b759b4fe72946/pydantic_core-2.27.2-cp313-cp313-win_amd64.whl", hash = "sha256:953101387ecf2f5652883208769a79e48db18c6df442568a0b5ccd8c2723abee", size = 1990453 },
     { url = "https://files.pythonhosted.org/packages/51/b2/b2b50d5ecf21acf870190ae5d093602d95f66c9c31f9d5de6062eb329ad1/pydantic_core-2.27.2-cp313-cp313-win_arm64.whl", hash = "sha256:ac4dbfd1691affb8f48c2c13241a2e3b60ff23247cbcf981759c768b6633cf8b", size = 1885186 },
+]
+
+[[package]]
+name = "pydantic-function-models"
+version = "0.1.10"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/83/dc9cf4c16159266e643a16b14dd90c24e859670fbe2611140c0cd5503cae/pydantic_function_models-0.1.10.tar.gz", hash = "sha256:d88e37c19bc2b9d88850a6f00f0227212aae1b0d55de45c9de7af65373844027", size = 9150 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0b/c6/c8412c88f4113b7cf3b33ae08f4abcd94fe0413d09ec49780f35f8f9e790/pydantic_function_models-0.1.10-py3-none-any.whl", hash = "sha256:9c1b0be9537a48f3ad9e3d9dd6c4e9ebcce98dd79a1bb329868b576cf50452c1", size = 8061 },
 ]
 
 [[package]]
@@ -340,10 +366,12 @@ source = { virtual = "." }
 dependencies = [
     { name = "httpx" },
     { name = "mcp", extra = ["cli"] },
+    { name = "mcpup" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.3.0" },
+    { name = "mcpup", specifier = ">=0.1.1" },
 ]
