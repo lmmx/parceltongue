@@ -89,4 +89,4 @@ if __name__ == "__main__":
     mcp = create_mcp_server("parceltongue", packages)
     
     # Run the server
-    mcp.run(transport='s
+    mcp.run(transport='stdio')
