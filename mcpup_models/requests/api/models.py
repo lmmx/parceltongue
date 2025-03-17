@@ -2,13 +2,12 @@
 
 import requests.api
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Delete:
     """Sends a DELETE request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param \\*\\*kwargs: Optional arguments that ``request`` takes.
     :return: :class:`Response <Response>` object
@@ -21,18 +20,18 @@ class Delete:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.delete
 
     model = ValidatedFunction(requests.api.delete).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Get:
     """Sends a GET request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param params: (optional) Dictionary, list of tuples or bytes to send
         in the query string for the :class:`Request`.
@@ -47,18 +46,18 @@ class Get:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.get
 
     model = ValidatedFunction(requests.api.get).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Head:
     """Sends a HEAD request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param \\*\\*kwargs: Optional arguments that ``request`` takes. If
         `allow_redirects` is not provided, it will be set to `False` (as
@@ -73,18 +72,18 @@ class Head:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.head
 
     model = ValidatedFunction(requests.api.head).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Options:
     """Sends an OPTIONS request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param \\*\\*kwargs: Optional arguments that ``request`` takes.
     :return: :class:`Response <Response>` object
@@ -97,18 +96,18 @@ class Options:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.options
 
     model = ValidatedFunction(requests.api.options).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Patch:
     """Sends a PATCH request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param data: (optional) Dictionary, list of tuples, bytes, or file-like
         object to send in the body of the :class:`Request`.
@@ -124,18 +123,18 @@ class Patch:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.patch
 
     model = ValidatedFunction(requests.api.patch).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Post:
     """Sends a POST request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param data: (optional) Dictionary, list of tuples, bytes, or file-like
         object to send in the body of the :class:`Request`.
@@ -151,18 +150,18 @@ class Post:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.post
 
     model = ValidatedFunction(requests.api.post).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Put:
     """Sends a PUT request.
-    
+
     :param url: URL for the new :class:`Request` object.
     :param data: (optional) Dictionary, list of tuples, bytes, or file-like
         object to send in the body of the :class:`Request`.
@@ -178,18 +177,18 @@ class Put:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.put
 
     model = ValidatedFunction(requests.api.put).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Request:
     """Constructs and sends a :class:`Request <Request>`.
-    
+
     :param method: method for the new :class:`Request` object: ``GET``, ``OPTIONS``, ``HEAD``, ``POST``, ``PUT``, ``PATCH``, or ``DELETE``.
     :param url: URL for the new :class:`Request` object.
     :param params: (optional) Dictionary, list of tuples or bytes to send
@@ -219,9 +218,9 @@ class Request:
     :param cert: (optional) if String, path to ssl client cert file (.pem). If Tuple, ('cert', 'key') pair.
     :return: :class:`Response <Response>` object
     :rtype: requests.Response
-    
+
     Usage::
-    
+
       >>> import requests
       >>> req = requests.request('GET', 'https://httpbin.org/get')
       >>> req
@@ -234,9 +233,10 @@ class Request:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.api
+
         return requests.api.request
 
     model = ValidatedFunction(requests.api.request).model
 
 
-__all__ = ['Delete', 'Get', 'Head', 'Options', 'Patch', 'Post', 'Put', 'Request']
+__all__ = ["Delete", "Get", "Head", "Options", "Patch", "Post", "Put", "Request"]

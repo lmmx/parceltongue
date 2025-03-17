@@ -2,9 +2,8 @@
 
 import requests
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class CheckCompatibility:
     """Pydantic model for function parameters."""
@@ -16,9 +15,10 @@ class CheckCompatibility:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests
+
         return requests.check_compatibility
 
     model = ValidatedFunction(requests.check_compatibility).model
 
 
-__all__ = ['CheckCompatibility']
+__all__ = ["CheckCompatibility"]

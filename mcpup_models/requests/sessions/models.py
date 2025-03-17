@@ -2,13 +2,12 @@
 
 import requests.sessions
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class MergeHooks:
     """Properly merges both requests and session hooks.
-    
+
     This is necessary because when request_hooks == {'response': []}, the
     merge breaks Session hooks entirely."""
 
@@ -19,14 +18,14 @@ class MergeHooks:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.sessions
+
         return requests.sessions.merge_hooks
 
     model = ValidatedFunction(requests.sessions.merge_hooks).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class MergeSetting:
     """Determines appropriate setting for a given request, taking into account
@@ -40,24 +39,24 @@ class MergeSetting:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.sessions
+
         return requests.sessions.merge_setting
 
     model = ValidatedFunction(requests.sessions.merge_setting).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class Session:
     """Returns a :class:`Session` for context-management.
-    
+
     .. deprecated:: 1.0.0
-    
+
         This method has been deprecated since version 1.0.0 and is only kept for
         backwards compatibility. New code should use :class:`~requests.sessions.Session`
         to create a session. This may be removed at a future date.
-    
+
     :rtype: Session"""
 
     # Original function signature: ()
@@ -67,9 +66,10 @@ class Session:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests.sessions
+
         return requests.sessions.session
 
     model = ValidatedFunction(requests.sessions.session).model
 
 
-__all__ = ['MergeHooks', 'MergeSetting', 'Session']
+__all__ = ["MergeHooks", "MergeSetting", "Session"]

@@ -2,9 +2,8 @@
 
 import requests._internal_utils
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class ToNativeString:
     """Given a string object, regardless of type, returns a representation of
@@ -18,18 +17,18 @@ class ToNativeString:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests._internal_utils
+
         return requests._internal_utils.to_native_string
 
     model = ValidatedFunction(requests._internal_utils.to_native_string).model
 
 
-from typing import Any, Dict, List, Optional, Union, Tuple
-from pydantic import BaseModel, Field
 from pydantic_function_models import ValidatedFunction
+
 
 class UnicodeIsAscii:
     """Determine if unicode string only contains ASCII characters.
-    
+
     :param str u_string: unicode string to check. Must be unicode
         and not Python 2 `str`.
     :rtype: bool"""
@@ -41,9 +40,10 @@ class UnicodeIsAscii:
     def get_original_function():
         """Get the original function this model is based on."""
         import requests._internal_utils
+
         return requests._internal_utils.unicode_is_ascii
 
     model = ValidatedFunction(requests._internal_utils.unicode_is_ascii).model
 
 
-__all__ = ['ToNativeString', 'UnicodeIsAscii']
+__all__ = ["ToNativeString", "UnicodeIsAscii"]
