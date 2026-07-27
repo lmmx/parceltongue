@@ -1,7 +1,6 @@
 """Pydantic models for requests.sessions functions."""
 
 import requests.sessions
-
 from pydantic_function_models import ValidatedFunction
 
 

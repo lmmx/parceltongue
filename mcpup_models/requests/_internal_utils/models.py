@@ -1,7 +1,6 @@
 """Pydantic models for requests._internal_utils functions."""
 
 import requests._internal_utils
-
 from pydantic_function_models import ValidatedFunction
 
 

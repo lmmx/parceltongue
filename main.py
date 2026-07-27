@@ -1,5 +1,6 @@
-import sys
 import subprocess
+import sys
+
 from mcp.server.fastmcp import FastMCP
 
 
@@ -44,13 +45,13 @@ def create_mcp_server(server_name: str, package_names: list[str]) -> FastMCP:
             try:
                 # Try to import the requests API module
                 from mcpup_models.requests.api import (
-                    Get,
-                    Post,
-                    Put,
                     Delete,
+                    Get,
                     Head,
                     Options,
                     Patch,
+                    Post,
+                    Put,
                 )
 
                 # Register each HTTP method
@@ -67,13 +68,13 @@ def create_mcp_server(server_name: str, package_names: list[str]) -> FastMCP:
             try:
                 # Try to import the httpx API module
                 from mcpup_models.httpx.api import (
-                    Get,
-                    Post,
-                    Put,
                     Delete,
+                    Get,
                     Head,
                     Options,
                     Patch,
+                    Post,
+                    Put,
                 )
 
                 # Register each HTTP method

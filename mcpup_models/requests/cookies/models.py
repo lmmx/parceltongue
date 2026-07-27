@@ -1,7 +1,6 @@
 """Pydantic models for requests.cookies functions."""
 
 import requests.cookies
-
 from pydantic_function_models import ValidatedFunction
 
 
