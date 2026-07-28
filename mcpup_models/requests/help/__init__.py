@@ -4,7 +4,7 @@
 from .models import *  # noqa
 
 # Import all models
-from .models import *  # noqa
+from .models import *
 
 # Import all models
-from .models import *  # noqa
+from .models import *

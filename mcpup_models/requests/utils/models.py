@@ -1,7 +1,6 @@
 """Pydantic models for requests.utils functions."""
 
 import requests.utils
-
 from pydantic_function_models import ValidatedFunction
 
 
